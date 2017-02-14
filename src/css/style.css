@@ -1,0 +1,485 @@
+/*@import "animate.css";
+@import "remodal/remodal.css";
+@import "remodal/remodal-default-theme.css";*/
+
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.clearfix:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+body {
+  background:
+  radial-gradient(circle farthest-side at 0% 50%,#fb1 23.5%,rgba(240,166,17,0) 0)21px 30px,
+  radial-gradient(circle farthest-side at 0% 50%,#B71 24%,rgba(240,166,17,0) 0)19px 30px,
+  linear-gradient(#fb1 14%,rgba(240,166,17,0) 0, rgba(240,166,17,0) 85%,#fb1 0)0 0,
+  linear-gradient(150deg,#fb1 24%,#B71 0,#B71 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#B71 0,#B71 76%,#fb1 0)0 0,
+  linear-gradient(30deg,#fb1 24%,#B71 0,#B71 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#B71 0,#B71 76%,#fb1 0)0 0,
+  linear-gradient(90deg,#B71 2%,#fb1 0,#fb1 98%,#B71 0%)0 0 #fb1;
+  background-size:40px 60px;
+}
+.wrapper {
+  background: rgba(249, 186, 3, 0.64);
+	/*filter: blur(5px);*/
+  margin: 0 auto;
+  border-radius: 5px;
+  width: 80%;
+}
+
+    #scrollup {
+      position: fixed;
+      z-index: 10;/* фиксированная позиция */
+      opacity: 0.7; /* прозрачность */
+      padding: 10px 10px 10px;
+      border-radius: 30px;
+      background: #ff0000;
+      border-radius: 5px;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 5px;
+      left: 20px;
+      bottom: 44px;
+      display: block; /* спрятать блок */
+      cursor: pointer;
+    }
+    #popup__toggle{
+			bottom: 21px;
+			right: -11px;
+      position:fixed;
+      z-index: 10;
+    }
+
+    .img-circle{
+      background-color:#e32929;
+      box-sizing:content-box;
+      -webkit-box-sizing:content-box;
+    }
+
+    .circlephone {
+      box-sizing:content-box;
+      -webkit-box-sizing:content-box;
+      border: 2px solid #e32929;
+      width:150px;
+      height:150px;
+      bottom:-25px;
+      right:10px;
+      position:absolute;
+      -webkit-border-radius:100%;
+      -moz-border-radius: 100%;
+      border-radius: 100%;
+      opacity: 1;
+      -webkit-animation: circle-anim 2.4s infinite ease-in-out !important;
+      -moz-animation: circle-anim 2.4s infinite ease-in-out !important;
+      -ms-animation: circle-anim 2.4s infinite ease-in-out !important;
+      -o-animation: circle-anim 2.4s infinite ease-in-out !important;
+      animation: circle-anim 2.4s infinite ease-in-out !important;
+      -webkit-transition: all .5s;-moz-transition: all .5s;
+      -o-transition: all .5s;transition: all 0.5s;
+    }
+
+    .circle-fill{
+      box-sizing:content-box;
+      -webkit-box-sizing:content-box;
+      background-color:#e32929;
+      width:100px;height:100px;
+      bottom:0px;right:35px;
+      position:absolute;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      border-radius: 100%;
+      border: 2px solid transparent;
+      -webkit-animation: circle-fill-anim 2.3s infinite ease-in-out;
+      -moz-animation: circle-fill-anim 2.3s infinite ease-in-out;
+      -ms-animation: circle-fill-anim 2.3s infinite ease-in-out;
+      -o-animation: circle-fill-anim 2.3s infinite ease-in-out;
+      animation: circle-fill-anim 2.3s infinite ease-in-out;
+      -webkit-transition: all .5s;
+      -moz-transition: all .5s;
+      -o-transition: all .5s;transition: all 0.5s;
+    }
+
+    .img-circle{
+      box-sizing:content-box;
+      -webkit-box-sizing:content-box;
+      width:72px;height:72px;bottom: 14px;
+      right: 49px;position:absolute;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      border-radius: 100%;
+      border: 2px solid transparent;
+    }
+
+    .img-circleblock{
+      box-sizing:content-box;
+      -webkit-box-sizing:content-box;
+      width:72px;
+      height:72px;
+      background-image:url(../img/mini.png);
+      background-position: center center;
+      background-repeat:no-repeat;
+      animation-name: tossing;
+      -webkit-animation-name: tossing;
+      animation-duration: 1.5s;
+      -webkit-animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+      -webkit-animation-iteration-count: infinite;
+    }
+
+    @keyframes pulse {
+      0% {transform: scale(0.9);opacity: 1;}
+      50% {transform: scale(1); opacity: 1; }
+      100% {transform: scale(0.9);opacity: 1;}}
+     @-webkit-keyframes pulse {
+       0% {-webkit-transform: scale(0.95);opacity: 1;}
+      50% {-webkit-transform: scale(1);opacity: 1;}
+      100% {-webkit-transform: scale(0.95);opacity: 1;}
+    }
+    @keyframes tossing {
+      0% {transform: rotate(-8deg);}
+      50% {transform: rotate(8deg);}
+      100% {transform: rotate(-8deg);}}
+    @-webkit-keyframes tossing {
+      0% {-webkit-transform: rotate(-8deg);}
+      50% {-webkit-transform: rotate(8deg);}
+      100% {-webkit-transform: rotate(-8deg);}}
+    @-moz-keyframes circle-anim {
+      0% {
+        -moz-transform: rotate(0deg) scale(0.5) skew(1deg);
+        opacity: .1;
+        -moz-opacity: .1;
+        -webkit-opacity: .1;
+        -o-opacity: .1;
+      }
+      30% {
+        -moz-transform: rotate(0deg) scale(0.7) skew(1deg);
+        opacity: .5;
+        -moz-opacity: .5;
+        -webkit-opacity: .5;
+        -o-opacity: .5;
+      }
+      100% {
+        -moz-transform: rotate(0deg) scale(1) skew(1deg);
+        opacity: .6;
+        -moz-opacity: .6;
+        -webkit-opacity: .6;
+        -o-opacity: .1;}
+      }
+    @-webkit-keyframes circle-anim {
+      0% {-webkit-transform: rotate(0deg) scale(0.5) skew(1deg);-webkit-opacity: .1;}
+      30% {-webkit-transform: rotate(0deg) scale(0.7) skew(1deg);-webkit-opacity: .5;}
+      100% {-webkit-transform: rotate(0deg) scale(1) skew(1deg);-webkit-opacity: .1;}}
+    @-o-keyframes circle-anim {
+      0% {-o-transform: rotate(0deg) kscale(0.5) skew(1deg);-o-opacity: .1;}
+      30% {-o-transform: rotate(0deg) scale(0.7) skew(1deg);-o-opacity: .5;}
+      100% {-o-transform: rotate(0deg) scale(1) skew(1deg);-o-opacity: .1;}}
+    @keyframes circle-anim {
+      0% {transform: rotate(0deg) scale(0.5) skew(1deg);opacity: .1;}
+      30% {transform: rotate(0deg) scale(0.7) skew(1deg);opacity: .5;}
+      100% {transform: rotate(0deg) scale(1) skew(1deg); opacity: .1;}}
+    @-moz-keyframes circle-fill-anim {
+      0% {-moz-transform: rotate(0deg) scale(0.7) skew(1deg);opacity: .2;}
+      50% {-moz-transform: rotate(0deg) -moz-scale(1) skew(1deg);opacity: .2;}
+      100% {-moz-transform: rotate(0deg) scale(0.7) skew(1deg);opacity: .2;}}
+    @-webkit-keyframes circle-fill-anim {
+      0% {-webkit-transform: rotate(0deg) scale(0.7) skew(1deg);opacity: .2;  }
+      50% {-webkit-transform: rotate(0deg) scale(1) skew(1deg);opacity: .2;  }
+      100% {-webkit-transform: rotate(0deg) scale(0.7) skew(1deg);opacity: .2;}}
+    @-o-keyframes circle-fill-anim {
+      0% {-o-transform: rotate(0deg) scale(0.7) skew(1deg);opacity: .2;}
+      50% {-o-transform: rotate(0deg) scale(1) skew(1deg);opacity: .2;}
+      100% {-o-transform: rotate(0deg) scale(0.7) skew(1deg);opacity: .2;}}
+    @keyframes circle-fill-anim {
+      0% {transform: rotate(0deg) scale(0.7) skew(1deg);opacity: .2;}
+      50% {transform: rotate(0deg) scale(1) skew(1deg);opacity: .2;}
+      100% {transform: rotate(0deg) scale(0.7) skew(1deg);opacity: .2;}}
+
+
+.header {
+  padding: 20px 0;
+}
+		.header__header, .header__header2, .header__header3 {
+			display: none;
+		}
+		.header__logo {
+			width: 50%;
+			display: block;
+			margin: 0 auto;
+			-webkit-animation-delay: 1s;
+			animation-delay: 1s;
+
+
+		}
+
+
+
+
+
+.menu {
+	background: #ffdd00;
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
+	border-radius: 35px;
+	overflow: hidden;
+
+}
+		.menu ul li {
+			display: inline-block;
+		}
+				.menu__link {
+					margin-right: -4px;
+					color: #000000;
+					font-weight: bold;
+          font-size: 20px;
+          border-radius: 35px;
+					display: block;
+					padding: 20px 30px;
+					transition: background 0.5s;
+					-webkit-animation-delay: 1.5s;
+					animation-delay: 1.5s;
+				}
+				.menu__link:hover {
+					background: #ff5800;
+				}
+				.menu__linkactive {
+					background: #ff5800;
+				}
+
+
+.menu__dropdown {
+	padding: 20px 20px;
+	display: none;
+	/*height: 0px;*/
+	background: #ffb200;
+}
+
+		.menu__dropdown-header {
+			text-align: left;
+      font-size: 20px;
+      margin-bottom: 10px;
+			font-weight: bold;
+		}
+		.menu__dropdown p {
+      margin: 20px 0px;
+      text-align: left;
+			font-size: 20px;
+			font-family: 'open sans', ubuntu, sans-serif;
+
+		}
+    .telephonetext {
+      color: red;
+    }
+    .menu__dropdown-img {
+      border-radius: 40px;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+
+
+.content {
+	padding: 20px 20px;
+}
+		.content__banner {
+			width: 80%;
+			border-radius: 5px;
+      border-radius: 40px;
+
+		}
+
+.carouselwrapper {
+	margin: 20px 0;
+	border:1px solid #ffad00;
+	border-radius: 5px;
+	position: relative;
+	background: rgba(255, 237, 151, 0.51);
+	height: 450px;
+	overflow: hidden;
+
+}
+
+		.carouselwrapper__leftblock {
+			float: left;
+			width: 30%;
+			height: 500px;
+			padding: 20px 20px;
+			border-right: 1px solid #ffad00;
+			box-sizing: border-box;
+		}
+				.carouselwrapper__header {
+					margin-bottom: 10px;
+					font-size: 24px;
+				}
+				.carouselwrapper__foranimal {
+					height: 90%;
+					border-radius: 50%;
+				}
+		.carouselwrapper__rightblock {
+			float: left;
+			width: 70%;
+
+
+			box-sizing: border-box;
+			overflow: hidden;
+		}
+				.jcarousel {
+					position: relative;
+					z-index: 0;
+					overflow: hidden;
+					width: 100%;
+				}
+				.jcarousel ul {
+						width: 20000em;
+						position: relative;
+						list-style: none;
+						margin: 0;
+						padding: 0;
+				}
+
+				.jcarousel li {
+            padding-left: 30px;
+            padding-right: 30px;
+						float: left;
+						width: 500px;
+            padding-top: 55px;
+            position: relative;
+
+				}
+				.jcarousel-prev, .jcarousel-next {
+					position: absolute;
+					top: 165px;
+					width: 50px;
+					height: 50px;
+					z-index: 20;
+
+				}
+				.jcarousel-prev {
+          background: url(../img/arrow.svg) center center no-repeat;
+          background-size: 80%;
+          border-radius: 50%;
+					left: 0;
+          animation: 2s linear jcarouselbuttons infinite;
+          animation-delay: 1s;
+
+				}
+				.jcarousel-next {
+          background: url(../img/arrow-h.svg) center center no-repeat;
+          background-size: 80%;
+          border-radius: 50%;
+					right: 0px;
+          animation: 1s linear jcarouselbuttons infinite;
+          animation-delay: 1s;
+
+				}
+
+				.jcarousel__img {
+					float: left;
+          width: 50%;
+          /*margin-top: -35px;*/
+
+				}
+				.jcarousel__description {
+					float: left;
+          width: 50%;
+          font-size: 16px;
+          font-family: 'open sans', sans-serif;
+          text-align: justify;
+
+				}
+        .jcarousel__description-header {
+					float: left;
+          width: 50%;
+          font-size: 25px;
+          font-weight: bold;
+
+				}
+
+        .jcarousel__price {
+          position: absolute;
+          bottom: 0;
+          width: 90%;
+          padding: 10px 0px;
+          margin-top: 20px;
+          border-radius: 7px;
+          background: rgb(190, 0, 0);
+          margin: 10px auto;
+          color: white;
+          font-family: 'open sans', sans-serif;
+          text-align: center;
+        }
+        @keyframes jcarouselbuttons {
+          0%, 100% {}
+          50% {
+            transform: scale(1.1);
+          }
+        }
+
+
+
+
+.remodal__header {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+.remodal__phoneform, .remodal__nameform, .remodal__messageform {
+  width: 48%;
+  font-size: 20px;
+  height: 50px;
+  border: 1px solid orange;
+  border-radius: 10px;
+  margin: 1% 0;
+}
+.remodal__phoneform:focus, .remodal__nameform:focus, .remodal__messageform:focus {
+  border: 1px solid red;
+  border-radius: 10px;
+  outline: none;
+}
+.remodal__textarea {
+  width: 97%;
+  height: 100px;
+  max-width: 97%;
+  text-align: left;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid orange;
+}
+.remodal__textarea:focus {
+  border: 1px solid red;
+  border-radius: 10px;
+  outline: none;
+
+}
+.remodal__btn {
+  margin-top: 20px;
+  width: 200px;
+  font-size: 22px;
+  padding: 15px 0;
+  background: #fab400;
+  border: 1px solid orange;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+.content__royalimg {
+	width: 90%;
+  border-radius: 35px;
+}
+.content__free {
+	margin-top: 30px;
+	width: 70%;
+}
+
+
+/*@import "media.css";*/

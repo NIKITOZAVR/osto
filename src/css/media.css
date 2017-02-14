@@ -1,0 +1,382 @@
+@media (min-width: 300px) and (max-width: 479px){
+  .wrapper {
+    width: 90%;
+  }
+  .header__logo {
+    width: 95%;
+  }
+  .menu ul li {
+    width: 100%;
+
+  }
+  .menu__link {
+    padding: 5px 0;
+    font-size: 16px;
+  }
+  .content {
+    padding: 10px 10px;
+  }
+  .content__banner {
+    width: 100%;
+    border-radius: 25px;
+  }
+  .carouselwrapper {
+    height: 900px;
+  }
+  .carouselwrapper--cats {
+    height: 1350px;
+  }
+  .carouselwrapper__foranimal {
+    height: 80%;
+  }
+  .carouselwrapper__leftblock {
+    float: none;
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    border: none;
+    height: 270px;
+    padding: 10px 10px;
+  }
+
+  .carouselwrapper__rightblock {
+    float: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .jcarousel li {
+    margin-top: 0;
+    width: 292px;
+    padding: 5px;
+
+
+  }
+  .jcarousel--cat li {
+    min-height: 1070px;
+  }
+  .jcarousel__img {
+    float: none;
+    width: 50%;
+    margin-top: 0;
+  }
+  .jcarousel__description-header {
+    float: none;
+    width: 100%;
+  }
+  .jcarousel__description {
+    float: none;
+    width: 100%;
+    font-size: 17px;
+  }
+  .jcarousel__price {
+    width: 97%;
+  }
+  .content__royalimg {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .content__free {
+    width: 100%;
+  }
+  .remodal__phoneform, .remodal__nameform, .remodal__messageform {
+    width: 100%;
+  }
+}
+@media (min-width: 480px) and (max-width : 767px){
+  .wrapper {
+    width: 90%;
+  }
+  .header__logo {
+    width: 95%;
+  }
+  /*.menu__dropdown-img--small {
+    display: none;
+  }*/
+  .content {
+    padding: 10px 10px;
+  }
+  .content__banner {
+    width: 100%;
+  }
+  .carouselwrapper {
+    height: 800px;
+  }
+  .carouselwrapper--cats {
+    height: 1150px;
+  }
+  .carouselwrapper__leftblock {
+    float: none;
+    width: 100%;
+    height: 300px;
+    box-sizing: border-box;
+    border: none;
+    padding: 10px 10px;
+  }
+  .carouselwrapper__foranimal {
+    height: 80%;
+  }
+  .carouselwrapper__rightblock {
+    float: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .jcarousel li {
+    margin-top: -50px;
+    width: 386px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-height: 495px;
+  }
+  .jcarousel--cat li {
+    min-height: 845px;
+  }
+  .jcarousel__img {
+    float: none;
+    width: 40%;
+    margin-top: -35px;
+  }
+  .jcarousel__description-header {
+    float: none;
+    width: 100%;
+  }
+  .jcarousel__description {
+    float: none;
+    width: 100%;
+  }
+  .jcarousel__price {
+    width: 97%;
+  }
+  .content__royalimg {
+    width: 100%;
+  }
+  .content__free {
+    width: 100%;
+  }
+  .remodal__phoneform, .remodal__nameform, .remodal__messageform {
+    width: 48%;
+  }
+}
+@media (min-width: 768px) and (max-width: 960px){
+  .wrapper {
+    width: 80%;
+  }
+  .header__logo {
+    width: 80%;
+  }
+  /*.menu__dropdown-img--small {
+    display: none;
+  }*/
+  .content {
+    padding: 10px 10px;
+  }
+  .content__banner {
+    width: 100%;
+  }
+  .carouselwrapper {
+    height: 900px;
+  }
+  .carouselwrapper--cats {
+    height: 1140px;
+  }
+  .carouselwrapper__leftblock {
+    float: none;
+    width: 100%;
+    height: 380px;
+    box-sizing: border-box;
+    border: none;
+    padding: 10px 10px;
+  }
+
+  .carouselwrapper__rightblock {
+    float: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .jcarousel li {
+    /*margin-top: -50px;*/
+    width: 560px;
+    padding-left: 10px;
+    padding-right: 10px;
+    min-height: 460px;
+  }
+  .jcarousel--cat li {
+    min-height: 700px;
+  }
+  .jcarousel__img {
+    float: none;
+    width: 30%;
+    margin-top: -35px;
+  }
+  .jcarousel__description-header {
+    float: none;
+    width: 100%;
+  }
+  .jcarousel__description {
+    float: none;
+    width: 100%;
+  }
+  .jcarousel__price {
+    width: 97%;
+  }
+  .content__royalimg {
+    width: 100%;
+  }
+  .content__free {
+    width: 100%;
+  }
+  .remodal__phoneform, .remodal__nameform, .remodal__messageform {
+    width: 48%;
+  }
+}
+@media (min-width : 960px) and (max-width: 1280px){
+  .wrapper {
+    width: 80%;
+  }
+  .header__logo {
+    width: 70%;
+  }
+  /*.menu__dropdown-img--small {
+    display: none;
+  }*/
+  .content {
+    padding: 10px 10px;
+  }
+  .content__banner {
+    width: 100%;
+  }
+  .carouselwrapper {
+    height: 500px;
+  }
+  .carouselwrapper--cats {
+    height: 750px;
+  }
+  .carouselwrapper__leftblock {
+    float: left;
+    width: 30%;
+    height: 900px;
+    box-sizing: border-box;
+    padding: 10px 10px;
+  }
+  .carouselwrapper__foranimal {
+    width: 90%;
+    height: auto;
+  }
+
+  .carouselwrapper__rightblock {
+    float: left;
+    width: 70%;
+    box-sizing: border-box;
+  }
+  .jcarousel li {
+    margin-top: -20px;
+    width: 480px;
+    min-height: 410px;
+  }
+  .jcarousel--cat li {
+    height: 700px;
+  }
+  .jcarousel__img {
+    float: none;
+    width: 25%;
+    /*margin-top: -35px;*/
+  }
+  .jcarousel__description-header {
+    float: none;
+    width: 100%;
+  }
+  .jcarousel__description {
+    float: none;
+    width: 100%;
+  }
+  .jcarousel__price {
+    width: 90%;
+  }
+  .content__royalimg {
+    width: 100%;
+  }
+  .content__free {
+    width: 100%;
+  }
+  .remodal__phoneform, .remodal__nameform, .remodal__messageform {
+    width: 48%;
+  }
+}
+
+@media (min-width : 1280px){
+  .wrapper {
+    width: 80%;
+  }
+  .header__logo {
+    width: 70%;
+  }
+  /*.menu__dropdown-img--small {
+    display: none;
+  }*/
+  .content {
+    padding: 10px 10px;
+  }
+  .content__banner {
+    width: 80%;
+  }
+  .carouselwrapper {
+    height: 400px;
+  }
+  .carouselwrapper--cats {
+    height: 590px;
+  }
+  .carouselwrapper__leftblock {
+    float: left;
+    width: 30%;
+    height: 600px;
+    box-sizing: border-box;
+    padding: 10px 10px;
+  }
+  .carouselwrapper__foranimal {
+    height: 50%;
+  }
+
+  .carouselwrapper__rightblock {
+    float: left;
+    width: 70%;
+    box-sizing: border-box;
+  }
+  .jcarousel li {
+    margin-top: -20px;
+    width: 690px;
+    min-height: 360px;
+  }
+  .jcarousel--cat li {
+    min-height: 550px;
+  }
+  .jcarousel__img {
+    float: left;
+    width: 25%;
+    margin-left: 30px;
+    margin-right: 20px;
+  }
+  .jcarousel__description-header {
+    float: left;
+    width: 60%;
+  }
+  .jcarousel-next, .jcarousel-prev {
+    top: 130px;
+  }
+  .jcarousel__description {
+    float: left;
+    width: 60%;
+  }
+  .jcarousel__price {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .content__royalimg {
+    width: 70%;
+  }
+  .content__free {
+    width: 60%;
+  }
+  .remodal__phoneform, .remodal__nameform, .remodal__messageform {
+    width: 48%;
+  }
+}
